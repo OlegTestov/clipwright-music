@@ -77,6 +77,7 @@ def main() -> None:
                 "beats": beat_times,
                 "lufs": lufs,
                 "true_peak_db": peak,
+                "rating": {k: rating.get(k) for k in ("production", "modern", "promo_fit")},
                 "energy": rating.get("energy"),
                 "best_for": rating.get("best_for"),
                 "author": entry["author"] if entry else "Clipwright maintainer (AI-generated)",
